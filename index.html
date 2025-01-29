@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>   body {
+      background-color: #FFFAB7;
+            font-family: Arial, sans-serif;
+        }
+        h1, h2, h3, h4, h5,.nav-link  {
+          color: #86469C; /* Headings */
+      }
+      
+       h3:hover, h4:hover, h5:hover, h6:hover, .nav-link:hover {
+        color: #BC7FCD; /* Hover effect for headings */
+    }
+    
+  
+  
+  
+
+        #hero {
+          background-color: #FFFAB7;
+            color: #49243E;
+            padding: 50px 0;font-size: 23px;
+        }
+
+        .hero-left p {
+            margin-bottom: 1rem;
+        }
+
+        .hero-left h1 {
+          overflow: hidden; /* Ensures no overflow text before animation completes */
+          white-space: nowrap; /* Keeps text on a single line */
+          border-right: 2px solid white; /* Cursor effect */
+          width: 0; /* Initial width for typewriter effect */
+          animation: typewriter 4s steps(30, end) forwards, blink 0.5s step-end infinite alternate;
+        }
+        
+        @keyframes typewriter {
+          from {
+            width: 0;
+          }
+          to {
+            width: 100%;
+          }
+        }
+        
+        @keyframes blink {
+          50% {
+            border-color: transparent;
+          }
+        }
+    
+      
+        #hero .hero-right img {
+          width: 300px;
+          height: 300px;
+          object-fit: cover;
+          border: 4px solid #86469C;
+          border-radius: 50%;
+          box-shadow: 0 0 15px #BC7FCD;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          animation: glow 2s infinite;
+      }
+      
+      #hero .hero-right img:hover {
+          
+          box-shadow: 0 0 30px #FF9AD1, 0 0 60px #FF9AD1;
+      }
+      
+      @keyframes glow {
+          0% {
+              box-shadow: 0 0 10px #BC7FCD;
+          }
+          50% {
+              box-shadow: 0 0 20px #FF9AD1, 0 0 30px #FF9AD1;
+          }
+          100% {
+              box-shadow: 0 0 10px #BC7FCD;
+          }
+      }
+      
+      #about {
+      font-size: 20px;
+        color: #49243E; /* About section text color */
+    
+      background-color: #FFFAB7;
+    }
+    #about .container h3{
+      font-size: 33px;
+    }
+      section {
+
+        padding: 50px 0;
+    }
+    
+ .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-card i {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #FF9AD1;
+        }
+        .skill-card {
+          text-align: center;
+          padding: 20px;
+          background-color: #f8f9fa;
+          border-radius: 8px;
+          box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .skill-card:hover, .btn:hover {
+        transform: scale(1.1); 
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);/* Scale on hover for a more interactive effect */
+    }
+    
+    
+       .project-card {
+          max-width: 300px;
+          margin: 0 auto;
+           transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .project-card:hover{
+        transform: scale(1.1); 
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);/* Scale on hover for a more interactive effect */
+      }
+      .project-card img {
+          height: 150px;
+          object-fit: cover;
+      }
+
+      .marquee-container {
+        overflow: hidden;
+        position: relative;
+        white-space: nowrap;
+        width: 100%;
+    }
+
+    .marquee {
+        display: inline-block;
+        animation: marquee 10s linear infinite;
+        font-size: 1.2rem;
+    }
+
+    .marquee span {
+        display: inline-block;
+        padding-right: 2rem; /* Space between loops */
+    }
+
+    @keyframes marquee {
+        from {
+            transform: translateX(100%);
+        }
+        to {
+            transform: translateX(-100%);
+        }
+    }
+    
+   
+  .project-card img {
+      border: 2px solid #86469C; /* Adding border to project images */
+  }
+  
+  #contact .getInTouch {
+    background-color: #FFFAB7; /* Slightly transparent dark background */
+      color: #49243E; /* Contact box text */
+  }
+  
+  
+  
+  .btn-primary {
+      background-color: #86469C;
+      border-color: #86469C;
+  }
+  
+  .btn-primary:hover {
+      background-color: #BC7FCD;
+      border-color: #BC7FCD;
+  }
+  .btn {
+      transition: transform 0.2s ease;
+  }
+.modal .form-label ,.modal .form-control{
+  color: #672a7c;
+}
+.form-control{
+  border:1px solid  #BC7FCD;
+  outline:none;
+} 
+  /* <!-- .icons  i:hover {
+    transition: transform 0.2s ease;
+}*/
+
+
+
+
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Mahak</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacts">Contact</a></li>
+                
+                  </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="text-center text-md-start">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 hero-left">
+            <p>Hello!</p>
+            <h1 class="fw-bold">I'm Mahak Choubey</h1>
+            <h3>Website Designer & Developer</h3>
+            <p>My ultimate motto is to serve the demand of buyers by making them satisfied with proper file delivery in time.</p>
+            <div class="d-flex gap-2">
+              <button class="btn btn-primary ">Hire Me</button>
+              <button class="btn btn-secondary">
+                <i class="fas fa-play"></i> Start Tour
+              </button>
+            </div>
+          </div>
+          <div class="col-md-6 text-center hero-right"> 
+            <img src="IMG-20241109-WA0008.jpg"
+                 class="rounded-circle img-fluid " alt="Profile Picture" />
+        </div> 
+       
+      
+      </div>
+      </div>
+    </section>
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="row">
+               
+                <div class="col-md-12">
+                    <h2 class="text-center">About Me</h2>
+                    <hr>
+                    <p> A front end developer passionate with results delivered to create extraordinary user experience through visually
+                      pleasing, responsive, and user-friendly applications for the web. Having strong core competency in html, css,
+                      and JS along with exposure to industry standard frameworks including Reactjs with Redux and Bootstrap.
+              
+                      As a fresh graduate, I am eager to contribute my skills to a dynamic team. I am highly motivated and a quick
+                      learner with a strong problem-solving mindset. I strive to write clean, maintainable, and efficient code that
+                      adheres to industry best practices and standards.
+              
+                      Apart from technical skills, I am an excellent communicator and team player, which has made me work effectively
+                      with cross-functional teams. I am detail-oriented and a committed learner, ensuring quality work.
+              
+                      I aim to significantly contribute to the organization's success while continuously expanding my knowledge and
+                      skills as a frontend developer.</p>
+                    <ul>
+                        <li><strong>Name:</strong> Mahak Choubey</li>
+                        <li><strong>Email:</strong> mahak2003@gmail.com</li>
+                        <li><strong>Website:</strong> closetreasure.com</li>
+                    </ul>
+
+                    <a href="https://drive.google.com/file/d/1Imcet4XKishU0FQDgtEYe3V6W4oYpVVb/view?usp=sharing"><button class="btn btn-primary" >Resume</button></a>
+                </div>
+              
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2 class="text-center mb-4">Skills That I Possess</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fab fa-html5"></i>
+                    <p>HTML</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-css3-alt"></i>
+                    <p>CSS</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-js"></i>
+                    <p>JavaScript</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-react"></i>
+                    <p>React</p>
+                </div>
+                <div class="skill-card">
+                  <i class="fab fa-bootstrap"></i>
+                  <p>Bootstrap</p>
+              </div>
+              
+            <div class="skill-card">
+              <i class="fab fa-python"></i>
+              <p>Python</p>
+          </div>
+          <div class="skill-card">
+           <i class="fa-solid fa-code"></i>
+            <p>DSA</p>
+        </div>
+          <div class="skill-card">
+            <i class="fa-solid fa-database"></i>
+            <p>DBMS</p>
+        </div>
+            </div>
+        </div>
+    </section>       
+           
+            
+  <section id="projects" class="py-5 ">
+    <div class="container">
+        <div class="text-center mb-4">
+            <h2>My Projects</h2>
+            <p class="text-muted">Explore some of my recent work.</p>
+        </div>
+        <div class="row g-4">
+            <!-- Card 1 -->
+            <div class="col-md-6 col-lg-3 d-flex justify-content-center">
+                <div class="card project-card shadow-sm">
+                    <img src="Screenshot 2024-12-27 161645.png" class="card-img-top" alt="Project 1">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">AI Chatbot</h5>
+                        <p class="card-text text-muted" style="height:120px;">A versatile AI-powered chatbot offering seamless solutions.</p>
+                        <a href="https://github.com/mahakchoubey1/Mahak-chatbot/blob/main/README.md" class="btn btn-primary btn-sm">View Project</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="col-md-6 col-lg-3 d-flex justify-content-center">
+                <div class="card project-card shadow-sm">
+                    <img src="Screenshot 2024-12-27 162053.png" class="card-img-top" alt="Project 2">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">E-commerce Website</h5>
+                        <p class="card-text text-muted" style="height:120px;">Enhances shopping experiences with product recommendations, order tracking, and customer support.</p>
+                        <a href="https://github.com/mahakchoubey1/mahakchoubey1/blob/main/README.md" class="btn btn-primary btn-sm">View Project</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="col-md-6  col-lg-3 d-flex justify-content-center">
+                <div class="card project-card shadow-sm">
+                    <img src="Screenshot 2024-12-27 161821.png" class="card-img-top" alt="Project 3">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Hackathon Project</h5>
+                        <p class="card-text text-muted" style="height:120px;">Provides mood analysis and personalized wellness tips based on user inputs.</p>
+                        <a href="https://github.com/mahakchoubey1/hackathonproject-mentalhealth-" class="btn btn-primary btn-sm">View Project</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 d-flex justify-content-center">
+              <div class="card project-card shadow-sm">
+                  <img src="Screenshot 2024-12-29 172705.png" class="card-img-top" alt="Project 2">
+                  <div class="card-body text-center">
+                      <h5 class="card-title">Calculator</h5>
+                      <p class="card-text text-muted" style="height:120px;"> Performs quick and accurate mathematical computations.</p>
+                      <a href="#" class="btn btn-primary btn-sm">View Project</a>
+                  </div>
+              </div>
+          </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="bg-dark text-white py-5">
+  <div class="container text-center">
+    <!-- Get in Touch Box -->
+    <div class="getInTouch p-4 rounded shadow-lg" style="background-color: rgba(0, 0, 0, 0.9);">
+      <h3 >Start a project?</h3>
+      <p class="lead">Interested in working together? We should queue up a time to chat.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contactModal">Get in Touch</button>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="contactModalLabel">Contact Me</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="contactForm">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" name="user_name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="user_email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" name="user_message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+
+<footer class="bg-dark text-white py-4">
+  <div class="container">
+      <div class="row">
+          <!-- About Section -->
+          <div class="col-md-4">
+              <h5>About Me</h5>
+              <p>
+                  I'm a passionate developer creating solutions that make a difference. Let's connect and collaborate on exciting projects.
+              </p>
+              
+              
+                 
+              
+                  <!-- Button to Open the Modal -->
+                  <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contactModal">Contact Me</button>
+              
+                  <!-- Modal -->
+                  <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                          <div class="modal-content">
+                              <div class="modal-header">
+                                  <h5 class="modal-title" id="contactModalLabel">Contact Me</h5>
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                              <div class="modal-body">
+                                  <form id="contactForm">
+                                      <div class="mb-3">
+                                          <label for="name" class="form-label">Name</label>
+                                          <input type="text" class="form-control" id="name" name="user_name" required>
+                                      </div>
+                                      <div class="mb-3">
+                                          <label for="email" class="form-label">Email</label>
+                                          <input type="email" class="form-control" id="email" name="user_email" required>
+                                      </div>
+                                      <div class="mb-3">
+                                          <label for="message" class="form-label">Message</label>
+                                          <textarea class="form-control" id="message" name="user_message" rows="4" required></textarea>
+                                      </div>
+                                      <button type="submit" class="btn btn-primary">Submit</button>
+                                  </form>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              
+                  <!-- Bootstrap JS -->
+                 
+              
+                  <!-- EmailJS Form Submission -->
+                 
+             
+              
+          </div>
+
+          <!-- Links Section -->
+          <div class="col-md-4">
+              <h5>Quick Links</h5>
+              <ul class="list-unstyled">
+                  <li><a href="#hero" class="text-white text-decoration-none">Home</a></li>
+                  <li><a href="#about" class="text-white text-decoration-none">About</a></li>
+                  <li><a href="#projects" class="text-white text-decoration-none" >Projects</a></li>
+                  <li><a href="#contact" class="text-white text-decoration-none" >Contact</a></li>
+              </ul>
+          </div>
+
+          <!-- Social Media Section -->
+          <div class="col-md-4 text-center text-md-start icons">
+              <h5>Follow Me</h5>
+              <div>
+
+                  <a href="www.linkedin.com/in/mahak-choubey-a38b90289" target="_blank" class="text-white me-3 ">
+                      <i class="bi bi-linkedin fs-2" ></i>
+                  </a>
+                  <a href="https://github.com/mahakchoubey1/mahakchoubey1" target="_blank" class="text-white">
+                      <i class="bi bi-github fs-2" ></i>
+                  </a>
+              </div>
+          </div>
+      </div>
+
+      <div class="text-center mt-4">
+          <p class=" mb-0">&copy; 2024 Mahak Choubey. All rights reserved.</p>
+      </div>
+  </div>
+</footer>
+<div class="bg-dark text-white py-3">
+  <div class="marquee-container">
+      <div class="marquee">
+          <span>
+              🚀 Welcome to My Portfolio! 🌟 Let's build amazing things together. 💻 Follow me for updates! 📱
+          </span>
+      </div>
+  </div>
+</div>
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+    (function () {
+        emailjs.init("_2oP7exq4sUD60LxZ"); // Replace YOUR_PUBLIC_KEY with your actual EmailJS public key
+    })();
+</script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document.getElementById("contactForm").addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent default form submission
+
+          emailjs.sendForm("service_7yv9t4m", "template_d9rjobl", this)
+              .then(function () {
+                  alert("Message sent successfully!");
+                  document.getElementById("contactForm").reset(); // Clear the form
+              }, function (error) {
+                  alert("Failed to send the message. Please try again.");
+                  console.error("Error:", error);
+              });
+      });
+  </script>
+</body>
+
+</html>
+
+
